@@ -30,43 +30,43 @@ The below is taken mostly from [2].
 ## What is BMS?
  
  * BMS stems from an arcade game called [Beatmania](https://en.wikipedia.org/wiki/Beatmania) (now Beatmania IIDX).
- ..* BMS originally aimed to simulate it.
+ ** BMS originally aimed to simulate it.
  * BMS is a file format that stores necessary information, and a separate program is needed to run the game.
- ..* The file itself is written in plain text, and may be viewed via your favorite text editor.
+ ** The file itself is written in plain text, and may be viewed via your favorite text editor.
  * In a BMS game, when you press a key, the corresponding sound plays.
  * The aim of the game is to press the keys on correct timings, and hence "play" the song.
  * Hence, to create a BMS,
- ..* A *composer* must compose a song.
- ..* Some sounds in the song must be chopped and rendered into separate files so that they may be played.
- ..* A pattern, or *chart*, is made, and the chopped sounds are linked with each *note* marking the correct timing and key.
- ..* Optionally, a picture, banner, video(*BGA*), etc. may be inserted.
+ ** A *composer* must compose a song.
+ ** Some sounds in the song must be chopped and rendered into separate files so that they may be played.
+ ** A pattern, or *chart*, is made, and the chopped sounds are linked with each *note* marking the correct timing and key.
+ ** Optionally, a picture, banner, video(*BGA*), etc. may be inserted.
  * **For a real-life example of how this works, please refer to these works**
- ..* [NULCTRL / Music&Movie by Silentroom](https://youtu.be/4-fsTRyEZmI)
- ..* [Good life / Music by litmus* / Movie by kazari](https://youtu.be/zrqeye2uyuU)
+ ** [NULCTRL / Music&Movie by Silentroom](https://youtu.be/4-fsTRyEZmI)
+ ** [Good life / Music by litmus* / Movie by kazari](https://youtu.be/zrqeye2uyuU)
  * The red notes are called *scratch note*s
- ..* In beatmania, a circular-shaped DJ-ic thingy is "scratch"ed at the timing indicated.
- ..* with a keyboard, a key is to be pressed instead.
+ ** In beatmania, a circular-shaped DJ-ic thingy is "scratch"ed at the timing indicated.
+ ** with a keyboard, a key is to be pressed instead.
  * The long notes are called a *long note*
- ..* They are to be pressed and held down for an indicated amount of time.
- ....* This also varies from implementation to implementation.
+ ** They are to be pressed and held down for an indicated amount of time.
+ *** This also varies from implementation to implementation.
  * The other short notes we will call *short note*s.
- ..* A key is to be pressed on the timing indicated.
+ ** A key is to be pressed on the timing indicated.
   
 ## General
 
  * As mentioned above, the data necessary to run the game is stored as plain text in a .bms file.
  * Lines that begin with '#' are *command line*s. All the rest are *comment line*s, and are ignored. 
- ..* Since BMS files are compiled at runtime, you can order the lines in any fashion.
- ..* Command lines are case-insensitive.
- ....* This is implementation-specific for certain commands.
+ ** Since BMS files are compiled at runtime, you can order the lines in any fashion.
+ ** Command lines are case-insensitive.
+ *** This is implementation-specific for certain commands.
  * There are two types of command lines, which are *header* sentences and *channel* sentences.
- ..* For more info, refer to other files in this folder!
+ ** For more info, refer to other files in this folder!
 
 ## The Harsh Reality
 
  * The character encoding is not specified in any way. 
- ..* As a result, many games do not support the complete set of available characters.
- ..* The only character set safe for all implementations is ASCII.
+ ** As a result, many games do not support the complete set of available characters.
+ ** The only character set safe for all implementations is ASCII.
  * There are so many implementation-specific parts.
 
 ## And as such,
